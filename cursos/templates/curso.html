@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    
+    <div class="row">
+        <div class="col-6">
+            <img style="width: 20em;" src="{{ detalhes.imagem.url }}" alt="">
+            <div class="">
+                <a href="">
+                    {{ detalhes.nome_cursos }}
+                </a>
+                <p> Nome do coordenador do curso:
+                    {{ detalhes.nome_coordenador }}
+                </p>
+                <p>
+                    {{ detalhes.descricao }}
+                </p>
+                <p> Quantidade de períodos:
+                    {{ detalhes.periodos }}
+                </p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}

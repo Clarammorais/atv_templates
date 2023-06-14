@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    {% for i in cursos %}
+    <div class="row">
+        <div class="col-6">
+            <img style="width: 19em;" src="{{ i.imagem.url }}" alt="">
+            <div class="">
+                <a href="{% url 'detalhe' i.id %}">
+                    {{ i.nome_cursos }}
+                </a>
+                <p>
+                    {{ i.nome_coordenador }}
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
